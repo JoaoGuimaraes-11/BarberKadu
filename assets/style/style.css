@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pirata+One&display=swap');*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", serif;
+}
+body{
+    background: #000;
 }
 :root{
     --principal-color: #ec1616;
@@ -66,7 +68,10 @@
 .nav-itens li:hover::after{
     width: 100%;
 }
-
+.itens{
+    display: flex;
+    
+}
 /* ESTILIZANDO MAIN */
 .main-content{
     background-color: #000;
@@ -104,7 +109,7 @@
     margin-top: 12px;
     display: inline-block;
     font-weight: bolder;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: .3s linear;
     font-weight: 500;
 }
@@ -134,7 +139,7 @@
     content: '';
     height: 2px;
     position: absolute;
-    background-color: #ec1616;
+    background-color: var(--principal-color);
     width: 0;
     bottom: -1px;
     left: 0;
@@ -157,4 +162,103 @@
     border: 1px solid var(--principal-color);
     padding: 10px;
     border-radius: 10px;
+}
+.efect-icons{
+    height: 20px;
+    width: 4px;
+    background-color: var(--principal-color);
+    margin-left:  8px;
+}
+
+/* ESTILIZANDO SECTIONS */
+.section-content{
+    margin-top: 30px;
+}
+.section-content h2{
+    color: #fff;
+    text-align: center;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    font-size: 45px;
+    
+}
+.section-content h2::after{
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    background-color: var(--principal-color);
+    width: 100%;
+    height: 2px;
+}
+.container-section{
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.container-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cards{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.cards img{
+    width: 70px;
+    object-fit: cover;
+    padding-bottom: 14px;
+}
+.cards h3{
+    padding: 10px;
+}
+.cards p{
+    padding: 10px 0px;
+    max-width: 260px; /* ajuste conforme seu design */
+    margin: 0 auto;   /* centraliza o bloco */
+    text-align: justify;
+    word-break: break-word;
+    color: #ccc;
+}
+@media screen and (min-width:312px) and (max-width:413px){
+    .main-text{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-text h1{
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+        line-height: 35px;
+        /* padding: 10px; */
+    }
+    .agendar-btn{
+        font-size: 14px;
+    }
+    .icons{
+        display: none;
+    }
+    .container-cards{
+        flex-direction: column;
+    }
+    .cards{
+        width: 90%;
+    }
 }

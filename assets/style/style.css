@@ -4,8 +4,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", serif;
 }
-body{
+body, html{
     background: #000;
+    overflow-x: hidden;
 }
 :root{
     --principal-color: #ec1616;
@@ -70,7 +71,47 @@ body{
 }
 .itens{
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
+}
+#openMenu{
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    position: relative;
+}
+.itens i{
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+}
+.itens i:hover{
+    color: var(--principal-color);
+}
+.nav-mobile {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 300px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    height: 100dvh;
+    z-index: 5;
+    background: linear-gradient(rgba(0, 0, 0, .6));
+}
+.nav-itens-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s ease-in-out;
+    width: 100%;
+}
+.nav-mobile.active {
+    transform: translateX(0);
+}
+.nav-itens-mobile li a{
+    padding: 10px;
 }
 /* ESTILIZANDO MAIN */
 .main-content{
@@ -234,6 +275,16 @@ body{
     color: #ccc;
 }
 @media screen and (min-width:312px) and (max-width:413px){
+    .navbar{
+        display: none;
+    }
+    #openMenu{
+        margin-right: 15px;
+    }
+    .nav-mobile{
+        top: 60px;
+        width: 100%;
+    }
     .main-text{
         width: 100%;
         display: flex;

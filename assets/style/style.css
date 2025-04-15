@@ -274,7 +274,7 @@ body, html{
     word-break: break-word;
     color: #ccc;
 }
-@media screen and (min-width:312px) and (max-width:413px){
+@media screen and (min-width:312px) and (max-width:416px){
     .navbar{
         display: none;
     }

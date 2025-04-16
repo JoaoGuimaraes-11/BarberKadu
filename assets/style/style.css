@@ -74,12 +74,17 @@ body, html{
     align-items: center;
     justify-content: center;
 }
+.itens-mobile{
+
+}
+.itens-mobile.active{
+
+}
 #openMenu{
     background: none;
     outline: none;
     border: none;
     color: #fff;
-    position: relative;
 }
 .itens i{
     cursor: pointer;
@@ -94,13 +99,12 @@ body, html{
     top: 80px;
     right: 0;
     width: 300px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    transition: .3s;
     height: 100dvh;
     z-index: 5;
     background: linear-gradient(rgba(0, 0, 0, .6));
     border: 1px solid red;
-    visibility: hidden;
+    opacity: 0;
 }
 .nav-itens-mobile{
     display: flex;
@@ -110,8 +114,8 @@ body, html{
     width: 100%;
 }
 .nav-mobile.active {
-    transform: translateX(0);
-    visibility: visible;
+    transition: .3s;
+    opacity: 1;
 }
 .nav-itens-mobile li a{
     padding: 10px;

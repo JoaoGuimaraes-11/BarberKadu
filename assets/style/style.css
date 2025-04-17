@@ -18,6 +18,9 @@ body, html{
     background: var(--bg-color);
     color: #ccc;
     font-weight: bolder;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 .container-hero{
     display: flex;
@@ -74,17 +77,12 @@ body, html{
     align-items: center;
     justify-content: center;
 }
-.itens-mobile{
-
-}
-.itens-mobile.active{
-
-}
 #openMenu{
     background: none;
     outline: none;
     border: none;
     color: #fff;
+    display: none;
 }
 .itens i{
     cursor: pointer;
@@ -102,7 +100,7 @@ body, html{
     transition: .3s;
     height: 100dvh;
     z-index: 5;
-    background: linear-gradient(rgba(0, 0, 0, .6));
+    background: linear-gradient(rgba(0, 0, 0, 1));
     border: 1px solid red;
     opacity: 0;
 }
@@ -281,12 +279,87 @@ body, html{
     word-break: break-word;
     color: #ccc;
 }
-@media screen and (min-width:312px) and (max-width:416px){
+/* Estilizando Horário */
+.section-horario{
+    background:linear-gradient(rgba(0,0,0, .9), rgba(0,0,0, .9)), url(/assets/img/img-horarios.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.container-horario{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    gap: 70px;
+}
+.left-itens{
+    width: 50%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+.left-itens p{
+    margin-bottom: 26px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ccc;
+}
+.agendar-horario-btn{
+    padding: 14px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--principal-color);
+    transition: .3s linear;
+}
+.agendar-horario-btn:hover{
+    transform: scale(.9);
+}
+.principal-title{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.right-itens{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-right{
+    display: flex;
+    gap: 40px;
+}
+.hour{
+    font-weight: 300;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+.span-hour{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:312px) and (max-width:516px){
     .navbar{
         display: none;
     }
     #openMenu{
         margin-right: 15px;
+        display: block;
     }
     .nav-mobile{
         top: 60px;
@@ -318,5 +391,32 @@ body, html{
     }
     .cards{
         width: 90%;
+    }
+    .section-horario{
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+    .container-horario{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .left-itens{
+        width: 90%;
+        height: 100%;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .left-itens p{
+        margin: 30px 0;
+        width: 100%;
+    }
+    .right-itens{
+        width: 90%;
+        display: block;
+    }
+    .principal-title{
+        font-size: 26px;
+        width: 100%;
     }
 }

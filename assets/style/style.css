@@ -6,7 +6,6 @@
 }
 body, html{
     background: #000;
-    overflow-x: hidden;
 }
 :root{
     --principal-color: #ec1616;
@@ -306,7 +305,6 @@ body, html{
 }
 .left-itens p{
     margin-bottom: 26px;
-    font-size: 18px;
     font-weight: 300;
     color: #ccc;
 }
@@ -340,7 +338,8 @@ body, html{
 .hour{
     font-weight: 300;
     padding: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
 }
 .span-hour{
     font-weight: bold;

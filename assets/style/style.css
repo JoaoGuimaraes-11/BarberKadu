@@ -409,10 +409,14 @@ body, html{
     .left-itens p{
         margin: 30px 0;
         width: 100%;
+        font-size: 16px;
     }
     .right-itens{
         width: 90%;
         display: block;
+    }
+    .hour{
+        font-size: 14px;
     }
     .principal-title{
         font-size: 26px;
